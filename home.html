@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="stylebasico.css" rel="stylesheet">
+  <link href="stylehome.css" rel="stylesheet">
+  <title>Pel&Ser</title>
+  <link rel="icon" type="image/x-icon" href="img/icono-pag.png">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="home.html">
+        <img src="img/logo5.png" alt="Logo PEL&SER" width="150" height="auto">
+      </a>
+
+      <!-- Menú pantallas chicas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Opciones -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex ms-auto custom-search" role="search" id="searchForm">
+          <div class="input-group w-100 w-md-auto">
+            <input id="searchInput" class="form-control" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+        <ul class="navbar-nav nav-underline ms-auto"> <!-- me-auto mb-2 mb-lg-0 -->
+          <li class="nav-item">
+            <a class="nav-link text-white fs-5 mx-4 active" aria-current="page" href="home.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-5 mx-4" href="busqavanz.html">Busqueda Avanzada</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fs-5 mx-4" href="#" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MODAL LOGIN -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="loginModalLabel">INICIAR SESIÓN</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <input type="email" class="form-control p-3" id="emailInput" placeholder="Email" required>
+            </div>
+            <div class="mb-2">
+              <input type="password" class="form-control p-3" id="passwordInput" placeholder="Contraseña" required>
+            </div>
+            <div class="text-start mb-3">
+              <a href="#" id="forgotPasswordLink">Olvidé mi contraseña</a>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 p-2">INICIAR SESIÓN</button>
+          </form>
+        </div>
+        <div class="modal-footer border-0 text-center d-block">
+          <div class="line-wrapper">
+            <span class="line"></span>
+            <p class="low-opacity mb-1">No tengo cuenta</p>
+            <span class="line"></span>
+          </div>
+          <button id="registerButton" class="btn btn-outline-primary w-100 p-2">REGISTRARSE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAROUSEL TENDENCIAS -->
+  <h3 class="container pt-5 text-white">Tendencias esta semana</h3>
+  <div id="carouselExample" class="carousel slide d-none d-sm-block">
+    <div class=" container carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/the-substance.jpg" alt="Poster película The Substance">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">The Substance<span class="pel-ser fw-normal text-secondary fs-5"> |
+                  Película</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+              <!-- stretched-link a class (toda la card clic) -->
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Serie</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="sernolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/the-substance.jpg" alt="Poster película The Substance">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">The Substance<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Película</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Serie</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="sernolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/the-substance.jpg" alt="Poster película The Substance">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">The Substance<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Película</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Serie</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="sernolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/the-substance.jpg" alt="Poster película The Substance">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">The Substance<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Película</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Serie</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="sernolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/the-substance.jpg" alt="Poster película The Substance">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">The Substance<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Película</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                  Serie</span></h5>
+              <p class="card-text estrellas">★★★★☆</p>
+              <a href="sernolog.html" class="btn btn-primary">Más información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- CAROUSEL TENDENCIAS PANTALLAS CHICAS -->
+  <div id="carouselExampleControlsSmallScreen" class="carousel slide d-sm-none" data-bs-touch="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/the-substance.jpg" alt="Poster película The Substance">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">The Substance<span class="pel-ser fw-normal text-secondary fs-5"> |
+                Película</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                Serie</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="sernolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/the-substance.jpg" alt="Poster película The Substance">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">The Substance<span class="pel-ser fw-normal text-secondary fs-5"> |
+                Película</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                Serie</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="sernolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/the-substance.jpg" alt="Poster película The Substance">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">The Substance<span class="pel-ser fw-normal text-secondary fs-5"> |
+                Película</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="pelnolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-white">Breaking Bad<span class="pel-ser  fw-normal text-secondary fs-5"> |
+                Serie</span></h5>
+            <p class="card-text estrellas">★★★★☆</p>
+            <a href="sernolog.html" class="btn btn-primary">Más información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsSmallScreen"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsSmallScreen"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- BOTONES GÉNEROS -->
+  <h3 class="container pt-5 pb-3 text-white">Descubra por géneros</h3>
+  <div class="container text-center">
+    <!-- Primera fila -->
+    <div class="row g-3"> <!-- Clase g-3 para espaciado entre botones -->
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Acción</button>
+      </div>
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Animación</button>
+      </div>
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Aventura</button>
+      </div>
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Ciencia fic.</button>
+      </div>
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Comedia</button>
+      </div>
+      <div class="col-6 col-md-2">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Crimen</button>
+      </div>
+    </div>
+
+    <!-- Segunda fila -->
+    <div class="row g-3 pt-3"> <!-- Clase g-3 para espaciado entre botones -->
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Documental</button>
+      </div>
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold"
+          onclick="redirectToDrama()">Drama</button>
+      </div>
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Fantasía</button>
+      </div>
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Romance</button>
+      </div>
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Suspenso</button>
+      </div>
+      <div class="col-6 col-md">
+        <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Terror</button>
+      </div>
+    </div>
+
+    <!-- Tercera fila -->
+    <div id="extraRows" class="d-none">
+      <div class="row g-3 pt-3"> <!-- Clase g-3 para espaciado entre botones -->
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Bélico</button>
+        </div>
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Biográfico</button>
+        </div>
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Deporte</button>
+        </div>
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Familiar</button>
+        </div>
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Historia</button>
+        </div>
+        <div class="col-6 col-md">
+          <button type="button" class="btn btn-secondary btn-lg p-5 w-100 category-btn fw-bold">Musical</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón "Cargar más géneros" -->
+    <div class="pt-4 pb-5">
+      <button id="verMasBtn" class="btn btn btn-outline-light">Cargar más Géneros</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer mt-5">
+    <div class="container text-white text-center">
+      <p class="links">
+        <a href="https://www.facebook.com" class="footer-link me-4"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com" class="footer-link me-4"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.x.com" class="footer-link"><i class="bi bi-twitter-x"></i></a>
+      </p>
+      <p class="copyright">© 2004 - 2024 COPYRIGHT</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script>
+    // BOTON VER MAS CAT
+    document.getElementById('verMasBtn').addEventListener('click', function () {
+      var extraRows = document.getElementById('extraRows');
+      if (extraRows.classList.contains('d-none')) {
+        extraRows.classList.remove('d-none');
+        this.textContent = 'Ver menos';
+      } else {
+        extraRows.classList.add('d-none');
+        this.textContent = 'Cargar más Géneros';
+      }
+    });
+
+    // BOTON DRAMA
+    function redirectToDrama() {
+      window.location.href = "ejemplogen.html"; // Replace "drama.html" with the actual path to your HTML file
+    }
+
+    window.onscroll = function () {
+      var backToTopButton = document.getElementById("backToTop");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopButton.style.display = "block"; // Mostrar botón
+      } else {
+        backToTopButton.style.display = "none";  // Ocultar botón
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+  </script>
+
+  <script src="jsbasico.js"></script>
+
+</body>
+
+</html>

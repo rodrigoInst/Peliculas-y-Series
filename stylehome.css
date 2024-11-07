@@ -1,0 +1,128 @@
+/* CAROUSEL TENDENCIAS */
+.card {
+    background-color: #14181D;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 6px 8px 0 rgba(0, 0, 0, 0.965);
+}
+
+.estrellas {
+    font-size: 1.5rem;
+    color: #FFD700; /* Color dorado para las estrellas */
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #e1e1e1;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: 6vh;
+}
+
+.carousel-control-next {
+    right: 6vh;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@media screen and (min-width: 577px) {
+
+    .cards-wrapper {
+        display: flex;
+    }
+
+    .card {
+        margin: 0.5em;
+        width: calc(100%/5);
+    }
+
+    .image-wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50%;
+    }
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+/* CAROUSEL TENDENCIAS */
+
+/* BOTONES CATEGORÍAS */
+.category-btn {
+    background-color: #14181D;
+}
+/* BOTONES CATEGORÍAS */
+
+
+
+#backToTop {
+    display: none; /* No se muestra por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    opacity: 0.7; /* Poca opacidad */
+    transition: opacity 0.3s;
+    border-radius: 5px;
+    z-index: 99;
+}
+#backToTop:hover {
+    opacity: 2;
+}
+
+@media (max-width: 768px) {
+    #backToTop {
+        right: 10px;     /* Ajustar el margen derecho */
+        bottom: 15px;    /* Ajustar el margen inferior */
+        padding: 8px 12px; /* Ajustar el tamaño del botón */
+        font-size: 16px;   /* Reducir el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    #backToTop {
+        right: 5px;     /* Aún más cerca del borde */
+        bottom: 10px;   /* Aún más cerca del fondo */
+        padding: 6px 10px; /* Botón más pequeño */
+        font-size: 14px;   /* Fuente más pequeña */
+    }
+}

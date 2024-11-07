@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="stylebasico.css" rel="stylesheet">
+    <link href="stylesernl.css" rel="stylesheet">
+    <title>Serie - Pel&Ser</title>
+    <link rel="icon" type="image/x-icon" href="img/icono-pag.png">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo5.png" alt="Logo PEL&SER" width="150" height="auto">
+            </a>
+
+            <!-- Menú pantallas chicas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Opciones -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto custom-search" role="search" id="searchForm">
+                    <div class="input-group w-100 w-md-auto">
+                        <input id="searchInput" class="form-control" type="search" placeholder="Buscar"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                <ul class="navbar-nav nav-underline ms-auto"> <!-- me-auto mb-2 mb-lg-0 -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="busqavanz.html">Busqueda Avanzada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MODAL LOGIN -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="loginModalLabel">INICIAR SESIÓN</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control p-3" id="emailInput" placeholder="Email" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control p-3" id="passwordInput" placeholder="Contraseña"
+                                required>
+                        </div>
+                        <div class="text-start mb-3">
+                            <a href="#" id="forgotPasswordLink">Olvidé mi contraseña</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 p-2">INICIAR SESIÓN</button>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 text-center d-block">
+                    <div class="line-wrapper">
+                        <span class="line"></span>
+                        <p class="low-opacity mb-1">No tengo cuenta</p>
+                        <span class="line"></span>
+                    </div>
+                    <button id="registerButton" class="btn btn-outline-primary w-100 p-2">REGISTRARSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO SERIE -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda: Poster y botón para t y e -->
+            <div class="col-12 col-md-3 d-flex flex-column mt-5 poster-boton">
+                <div class="imagen">
+                    <img src="img/breaking-bad.jpg" alt="Poster serie Breaking Bad">
+                </div>
+                <button id="tempEpBtn" type="button" class="btn btn-outline-light">Temporadas y Episodios</button>
+            </div>
+
+            <!-- Columna central: Información de la serie -->
+            <div class="col-12 col-md-5 text-white mt-5">
+                <h1>Breaking Bad</h1><br>
+                <h6>
+                    <span class="fw-bold text-decoration-underline">Creado por:</span>
+                    <a href="#" id="creadorLink" class="text-white text-decoration-none">Vince Gilligan <i
+                            class="bi bi-info-circle"></i></a>
+                </h6><br>
+                <h6 class="fw-bold d-inline text-decoration-underline">Año:</h6>
+                <span>2008 - 2013</span><br><br>
+                <h6 class="fw-bold d-inline text-decoration-underline">Temporadas:</h6>
+                <span>5</span>
+                <span class="fw-bold d-inline text-decoration-underline ms-4">Episodios:</span>
+                <span>62</span><br><br>
+                <h6 class="fw-bold text-decoration-underline">Género/s:</h6>
+                <ul class="list-unstyled">
+                    <a href="ejemplogen.html" class="text-white genero-link">Drama</a> |
+                    <a href="#" class="text-white genero-link">Crimen</a> |
+                    <a href="#" class="text-white genero-link">Suspenso</a>
+                </ul>
+                <br>
+                <h6 class="fw-bold text-decoration-underline">Sinópsis:</h6> <!-- Sacado de imdb -->
+                <p>Walter White, un profesor de química de secundaria, recibe un diagnóstico de cáncer terminal. Para
+                    asegurar el futuro financiero de su familia, utiliza sus conocimientos para fabricar metanfetamina
+                    de alta pureza junto a su exalumno Jesse Pinkman. Su negocio pronto atrae tanto riqueza como la
+                    atención de su cuñado, un agente de la DEA, empujando a Walter a un peligroso mundo criminal donde
+                    las mentiras y los riesgos aumentan rápidamente.</p>
+            </div>
+
+            <!-- Columna derecha: Calificaciones y reseñas -->
+            <div class="col-12 col-md-4 mt-5">
+                <!-- Calificación y estrellas -->
+                <div class="calificacion  text-white p-3 mb-3 text-center">
+                    <h5>Calificación <span class="calificacion-num">4,5</span></h5>
+                    <div class="estrellas">
+                        ★★★★☆
+                    </div>
+                </div>
+
+                <!-- Reseñas de usuarios -->
+                <div class="reseñas text-white p-3 mb-3">
+                    <h5 class="text-center">Reseñas</h5>
+                    <div class="reseñas-list">
+                        <div class="reseña py-2 border-bottom">
+                            <strong>User_Heisenberg01</strong><br>
+                            La transformación de Walter White es simplemente increíble, ¡nunca vi algo igual!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>SkylerFan88</strong><br>
+                            El drama familiar en esta serie es tan intenso como la acción. ¡Te atrapa!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>PinkmanRules</strong><br>
+                            Jesse Pinkman tiene uno de los mejores arcos de personaje, lo amé desde el principio.
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>HankTheMan</strong><br>
+                            ¡El suspenso con Hank y su investigación es lo mejor de la serie!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>BlueMethFan</strong><br>
+                            La metanfetamina azul y todo lo que representa es tan icónica, ¡impresionante!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>TightropeAct09</strong><br>
+                            Cada decisión de Walter se siente como caminar por la cuerda floja, nunca sabes qué pasará.
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>SaulGoodmanFTW</strong><br>
+                            Saul Goodman aporta el toque justo de humor a tanta tensión. ¡Personaje brillante!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para loguearse -->
+                <div class="text-center mb-5">
+                    <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Iniciar sesión para calificar y/o escribir una reseña</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-5">
+        <div class="container text-white text-center">
+            <p class="links">
+                <a href="https://www.facebook.com" class="footer-link me-4"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" class="footer-link me-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.x.com" class="footer-link"><i class="bi bi-twitter-x"></i></a>
+            </p>
+            <p class="copyright">© 2004 - 2024 COPYRIGHT</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <script>
+        // INFO CREADOR
+        document.getElementById('creadorLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Evitar la acción por defecto del enlace
+            Swal.fire({
+                title: '<span style="margin-bottom: 0px; display: inline-block;">Información del Creador</span>',
+                html: `
+                    <p>Vince Gilligan es un escritor, productor y director de televisión estadounidense. Es conocido por crear la aclamada serie <strong>Breaking Bad</strong> y su spin-off <strong>Better Call Saul</strong>.</p>
+                    <h5 style="margin-top: 15px;">Series y Películas Más Populares:</h5>
+                    <ul>
+                        <li><strong>Breaking Bad</strong> (2008-2013) - Serie de drama y crimen.</li>
+                        <li><strong>Better Call Saul</strong> (2015-2022) - Spin-off centrado en el personaje de Saul Goodman.</li>
+                        <li><strong>The X-Files</strong> (1993-2018) - Serie de ciencia ficción donde trabajó como productor y guionista.</li>
+                    </ul>
+                `,
+                icon: 'info',
+                width: '80%', // Cambiado a un valor más adaptable
+                maxWidth: '600px', // Ancho máximo para pantallas grandes
+                padding: '2em',
+                color: '#fff',
+                background: '#14181D',
+                showCloseButton: true,
+                focusConfirm: false,
+            });
+        });
+
+        // TEMP Y EP
+        document.getElementById('tempEpBtn').addEventListener('click', function () {
+            Swal.fire({
+                html: `
+                <div class="accordion p-3 custom-accordion" id="accordionExample">
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button custom-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Temporada 1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body custom-accordion-body">
+                                <ul>
+                                    <li>Episodio 1: Piloto</li>
+                                    <li>Episodio 2: Gato en la bolsa</li>
+                                    <li>Episodio 3: ...Y el costal se cierra</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Temporada 2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body custom-accordion-body">
+                                <ul>
+                                    <li>Episodio 1: Siete treinta y siete</li>
+                                    <li>Episodio 2: Gray Matter</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Temporada 3
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body custom-accordion-body">
+                                <ul>
+                                    <li>Episodio 1: No Mas</li>
+                                    <li>Episodio 2: Caballo sin nombre</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Temporada 4
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body custom-accordion-body">
+                                <ul>
+                                    <li>Episodio 1: Cuter</li>
+                                    <li>Episodio 2: Calibre-38 de cañon corto</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item custom-accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button custom-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Temporada 5
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body custom-accordion-body">
+                                <ul>
+                                    <li>Episodio 1: Vive libre o muere</li>
+                                    <li>Episodio 2: Madrigal</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>`,
+                width: '90%', // Para hacerlo más adaptable en pantallas pequeñas
+                background: '#14181D',
+                showCloseButton: true,
+                showConfirmButton: false,
+                customClass: {
+                    popup: 'responsive-sweetalert'
+                }
+            });
+        });
+    </script>
+    
+    <script src="jsbasico.js"></script>
+
+</body>
+
+</html>

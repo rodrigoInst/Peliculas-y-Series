@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="stylebasico.css" rel="stylesheet">
+    <link href="stylepelnl.css" rel="stylesheet">
+    <title>Película - Pel&Ser</title>
+    <link rel="icon" type="image/x-icon" href="img/icono-pag.png">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img src="img/logo5.png" alt="Logo PEL&SER" width="150" height="auto">
+            </a>
+
+            <!-- Menú pantallas chicas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Opciones -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex ms-auto custom-search" role="search" id="searchForm">
+                    <div class="input-group w-100 w-md-auto">
+                        <input id="searchInput" class="form-control" type="search" placeholder="Buscar"
+                            aria-label="Search">
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+                <ul class="navbar-nav nav-underline ms-auto"> <!-- me-auto mb-2 mb-lg-0 -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="busqavanz.html">Busqueda Avanzada</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5 mx-4" href="#" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- MODAL LOGIN -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-4">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="loginModalLabel">INICIAR SESIÓN</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <input type="email" class="form-control p-3" id="emailInput" placeholder="Email" required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="password" class="form-control p-3" id="passwordInput" placeholder="Contraseña"
+                                required>
+                        </div>
+                        <div class="text-start mb-3">
+                            <a href="#" id="forgotPasswordLink">Olvidé mi contraseña</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 p-2">INICIAR SESIÓN</button>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 text-center d-block">
+                    <div class="line-wrapper">
+                        <span class="line"></span>
+                        <p class="low-opacity mb-1">No tengo cuenta</p>
+                        <span class="line"></span>
+                    </div>
+                    <button id="registerButton" class="btn btn-outline-primary w-100 p-2">REGISTRARSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFO PELÍCULA -->
+    <div class="container">
+        <div class="row">
+            <!-- Columna izquierda: Poster y botón para tráiler -->
+            <div class="col-12 col-md-3 d-flex flex-column mt-5 poster-boton">
+                <div class="imagen">
+                    <img src="img/the-substance.jpg" alt="Poster película The Substance">
+                </div>
+                <button id="trailerBtn" type="button" class="btn btn-outline-light">Ver Tráiler</button>
+            </div>
+
+            <!-- Columna central: Información de la película -->
+            <div class="col-12 col-md-5 text-white mt-5">
+                <h1 class="fw-bold">The Substance</h1><br>
+                <h6>
+                    <span class="fw-bold text-decoration-underline">Dirigida por:</span>
+                    <a href="#" id="directoraLink" class="text-white text-decoration-none">Coralie Fargeat  <i class="bi bi-info-circle"></i></a>
+                </h6><br>
+                <h6 class="fw-bold d-inline text-decoration-underline">Año:</h6>
+                <span>2024</span><br><br>
+                <h6 class="fw-bold d-inline text-decoration-underline">Duración:</h6>
+                <span>2h 20min</span><br><br>
+                <h6 class="fw-bold text-decoration-underline">Género/s:</h6>
+                <ul class="list-unstyled">
+                    <a href="#" class="text-white genero-link">Terror</a> |
+                    <a href="ejemplogen.html" class="text-white genero-link">Drama</a> |
+                    <a href="#" class="text-white genero-link">Ciencia ficción</a>
+                </ul>
+                <br>
+                <h6 class="fw-bold text-decoration-underline">Sinópsis:</h6> <!-- Sacado de imdb -->
+                <p>¿Alguna vez has soñado con una mejor versión de ti mismo? Tú. Solo que mejor en todos los sentidos.
+                    Seriamente. Tienes que probar este nuevo producto. Se llama La Sustancia. Me cambió la vida. Genera
+                    otro tú. Un tú nuevo, más joven, más bello, más perfecto. Y solo hay una regla: compartes el tiempo.
+                    Una semana para ti. Una semana para el nuevo tú. Siete días cada uno. Un equilibrio perfecto. Fácil.
+                    ¿Derecha? Si respetas el equilibrio... ¿Qué podría salir mal?</p>
+            </div>
+
+            <!-- Columna derecha: Calificaciones y reseñas -->
+            <div class="col-12 col-md-4 mt-5">
+                <!-- Calificación y estrellas -->
+                <div class="calificacion  text-white p-3 mb-3 text-center">
+                    <h5>Calificación <span class="calificacion-num">3,9</span></h5>
+                    <div class="estrellas">
+                        ★★★★☆
+                    </div>
+                </div>
+
+                <!-- Reseñas de usuarios -->
+                <div class="reseñas text-white p-3 mb-3">
+                    <h5 class="text-center">Reseñas</h5>
+                    <div class="reseñas-list">
+                        <div class="reseña py-2 border-bottom">
+                            <strong>HorrorLover92</strong><br>
+                            El concepto de "La Sustancia" es perturbador y adictivo, ¡no podía dejar de verla!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>SciFi_Geek</strong><br>
+                            Una mezcla perfecta entre ciencia ficción y terror. ¡Me tuvo al borde del asiento!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>MindBender67</strong><br>
+                            La premisa de compartir tiempo con un "tú mejor" es escalofriante. ¡Qué original!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>DarkMatterFan</strong><br>
+                            La atmósfera es inquietante desde el principio. Te deja pensando mucho después de terminarla.
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>AltReality98</strong><br>
+                            La idea de una versión mejor de ti mismo... da miedo lo que uno haría para obtenerla.
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>Cinephile2024</strong><br>
+                            Coralie Fargeat lo hizo otra vez, ¡qué directora tan talentosa para crear tensión!
+                        </div>
+                        <div class="reseña py-2 border-bottom">
+                            <strong>PlotTwistFan</strong><br>
+                            El giro final me dejó impactado, no lo vi venir. ¡Muy recomendable!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón para loguearse -->
+                <div class="text-center mb-5">
+                    <button type="button" class="btn btn-outline-light w-100" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Iniciar sesión para calificar y/o escribir una reseña</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-5">
+        <div class="container text-white text-center">
+            <p class="links">
+                <a href="https://www.facebook.com" class="footer-link me-4"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" class="footer-link me-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.x.com" class="footer-link"><i class="bi bi-twitter-x"></i></a>
+            </p>
+            <p class="copyright">© 2004 - 2024 COPYRIGHT</p>
+        </div>
+    </footer>
+    
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        // BOTON TRAILER
+        document.getElementById('trailerBtn').addEventListener('click', function () {
+            Swal.fire({
+                title: '<span style="margin-bottom: 20px; display: inline-block;">Tráiler de la Película</span>',
+                html: '<iframe width="80%" height="315px" src="https://www.youtube.com/embed/LNlrGhBpYjc?si=9F25OVFLNzo1q-_P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+                width: '65%',
+                padding: '2em',
+                color: '#fff',
+                background: '#14181D',
+                showCloseButton: true,
+                focusConfirm: false,
+            });
+        });
+
+        // INFO DIRECTORA
+        document.getElementById('directoraLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Evitar que el enlace realice su acción por defecto
+            Swal.fire({
+                title: '<span style="margin-bottom: 0px; display: inline-block;">Información de la Directora</span>',
+                html: `
+                    <p>Coralie Fargeat es una directora conocida por su trabajo en películas de terror y suspenso, destacando por su estilo único y narrativas impactantes.</p>
+                    <h5 style="margin-top: 15px;">Películas y Series Más Populares:</h5>
+                    <ul>
+                        <li><strong>Revenge</strong> (2017) - Una película de venganza y supervivencia.</li>
+                        <li><strong>In My Skin</strong> (2002) - Explora la obsesión y la autoexploración.</li>
+                        <li><strong>Grave</strong> (2016) - Un drama que mezcla horror y crítica social.</li>
+                    </ul>
+                `,
+                icon: 'info',
+                width: '80%', // Cambiado a un valor más adaptable
+                maxWidth: '600px', // Ancho máximo para pantallas grandes
+                padding: '2em',
+                color: '#fff',
+                background: '#14181D',
+                showCloseButton: true,
+                focusConfirm: false,
+            });
+        });
+    </script>
+
+    <script src="jsbasico.js"></script>
+
+</body>
+
+</html>

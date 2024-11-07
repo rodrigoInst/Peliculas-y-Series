@@ -1,0 +1,147 @@
+/* POSTER */
+.imagen img {
+    width: 100%;
+    border-radius: 7px;
+}
+
+@media (max-width: 576px) {
+    .poster-boton {
+        align-items: center;
+    }
+    #tempEpBtn {
+        width: 80%;
+        margin-top: 15px;
+    }
+    .imagen {
+        width: 80%;
+        align-content: center;
+    }
+}
+
+@media (min-width: 577px) {
+    .poster-boton {
+        align-items: start;
+    }
+    #tempEpBtn {
+        width: 95%;
+        height: 11%;
+        margin-top: 30px;
+    }
+    .imagen {
+        width: 95%;
+        align-content: center;
+    }
+}
+/* POSTER */
+
+/* ALERTA TEMP Y CAP */
+@media (max-width: 576px) {
+    .responsive-sweetalert {
+      width: 100% !important;
+      max-width: none !important;
+    }
+  
+    .accordion-button {
+      font-size: 0.9rem; /* Ajusta el tamaño del texto del acordeón */
+    }
+  
+    .accordion-body ul li {
+      font-size: 0.85rem; /* Ajusta el tamaño de los episodios */
+    }
+}
+  
+@media (min-width: 577px) {
+    .responsive-sweetalert {
+      width: 600px !important; /* Ajusta el tamaño de la alerta en pantallas más grandes */
+    }
+}
+  
+.custom-accordion-item {
+    background-color: #14181D;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #ffffff; /* Línea blanca para delimitar cada opción */
+}
+
+.custom-accordion-button {
+    background-color: #14181D;
+    color: #ffffff;
+    border: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.custom-accordion-button:not(.collapsed) {
+    background-color: #1b2228; /* Tono más claro cuando está expandido */
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.custom-accordion-body {
+    background-color: #14181D;
+    color: #ffffff;
+}
+
+.custom-accordion-button::after {
+    color: #ffffff; /* Color blanco para las flechas */
+}
+
+ul {
+    padding-left: 20px; /* Ajusta la distancia de los items de la lista al margen izquierdo */
+}
+
+.responsive-sweetalert {
+    width: 90%; /* Mantener la alerta responsive */
+}
+/* ALERTA TEMP Y CAP */
+
+/* LINK GENEROS */
+.genero-link {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.genero-link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+/* LINK GENEROS */
+
+/* CALIFICACION Y RESEÑAS */
+.calificacion {
+    background-color: #14181D;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.estrellas {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.reseñas {
+    background-color: #14181D;
+    border-radius: 8px;
+    height: 330px;
+}
+
+.reseñas-list {
+    height: 273px;
+    overflow-y: auto;
+}
+
+.reseña {
+    font-size: 0.9rem;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.reseña:last-child {
+    border-bottom: none;
+}
+
+.btn {
+    font-size: 1rem;
+    border-radius: 8px;
+}
+/* CALIFICACION Y RESEÑAS */
